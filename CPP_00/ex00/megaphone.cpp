@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 20:40:25 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/20 21:15:16 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/20 21:25:16 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,8 @@ int main(int ac, char **str)
 {
     int i;
     
-    if(ac <= 1)
-    {
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-        return(0);
-    }
+    if(ac == 1)
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
     i = 1;
     while (i < ac)
     {
