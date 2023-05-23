@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 19:58:17 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/22 21:24:01 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/23 19:42:52 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,58 +14,58 @@
 
 contact::contact()
 {
-}  
+}
 
 contact::~contact()
 {
 }
 
-std::string contact::get_fname(void) const
+std::string contact::get_fname() const
 {
-    return (_first_name);
+    return (this->_first_name);
 }
 
-void contact::set_fname(std::string _firstname)
+std::string contact::get_lname() const
 {
-    _first_name = _firstname;
+    return (this->_last_name);
 }
 
-std::string contact::get_lname(void) const
+std::string contact::get_nname() const
 {
-    return (_last_name);
+    return (this->_nick_name);
 }
 
-void contact::set_lname(std::string _lastname)
+std::string contact::get_pnumber() const
 {
-    _last_name = _lastname;
+    return (this->_phone_number);
 }
 
-std::string contact::get_nname(void) const
+std::string contact::get_dsecret() const
 {
-    return (_nick_name);
+    return (this->_darkest_secret);
 }
 
-void contact::set_nname(std::string _nickname)
+void    contact::set_fname(std::string first_name)
 {
-    _nick_name = _nickname;
+    this->_first_name = first_name;
 }
 
-std::string contact::get_pnumber(void) const
+void    contact::set_lname(std::string last_name)
 {
-    return (_phone_number);
+    this->_last_name = last_name;
 }
 
-void    contact::set_pnumber(std::string _phonenumber)
+void    contact::set_nname(std::string nick_name)
 {
-    _phone_number = _phonenumber;
+    this->_nick_name = nick_name;
 }
 
-std::string contact::get_dsecret(void) const
+void    contact::set_pnumber(std::string phone_number)
 {
-    return (_darkest_secret);
+    this->_phone_number = phone_number;
 }
 
-void    contact::set_dsecret(std::string _darkestsecret)
+void    contact::set_dsecret(std::string darkset_secret)
 {
-    _darkest_secret = _darkestsecret;
+    this->_darkest_secret = darkset_secret;
 }

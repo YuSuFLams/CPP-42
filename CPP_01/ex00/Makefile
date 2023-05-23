@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = BraiiiiiiinnnzzzZ
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
@@ -10,16 +10,16 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = contact.hpp phonebook.hpp
+HEADER = Zombie.hpp
 
-SRCS = contact.cpp phonebook.cpp main.cpp
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $< -o $@
+	@$(CC) $(CFLAGS) $^ -o $@
 	@printf "$(C_BLUE)    - Compilation finished!....$(C_RESET)\n"
 
 %.o: %.cpp $(HEADER)

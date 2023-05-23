@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/20 20:40:25 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 19:53:46 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/23 21:35:01 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/23 21:54:11 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "Zombie.hpp"
+# define X 5
 
-std::string to_upper(std::string s)
+int main()
 {
-    int i;
-
-    i = -1;
-    while (s[++i])
-        s[i] = toupper(s[i]);
-    return (s);
-}
-
-int main(int ac, char **str)
-{
-    int i;
-    
-    if(ac == 1)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-    i = 1;
-    while (i < ac)
+    Zombie *zom = new zombieHorde(X, "youssef");
+    for (int i = 0; i < X; i++)
     {
-        std::cout << to_upper(str[i]);
-        i++;
+        zom[i].announce();
     }
-    std::cout << std::endl;
-    return 0;
+
+    delete zom;
+    return (0);
 }

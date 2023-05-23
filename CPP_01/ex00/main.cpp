@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 20:03:19 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 20:09:01 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/23 20:58:30 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/23 21:32:23 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-# include "contact.hpp"
-
-class phonebook
+int main()
 {
-    private:
-    
-    public:
-        phonebook();
-        ~phonebook();
-        void    add_command();
-        void    search_command();
-        
-};
+    // on heap
+    Zombie *me = newZombie("youssef");
+    me->announce();
 
-
-#endif
+    delete me;
+    // on stack
+    randomChump("holla");
+    return (0);
+}

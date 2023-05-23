@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 20:03:19 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 20:09:01 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/23 20:55:13 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/23 21:04:09 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-# include "contact.hpp"
-
-class phonebook
+Zombie* newZombie( std::string name )
 {
-    private:
-    
-    public:
-        phonebook();
-        ~phonebook();
-        void    add_command();
-        void    search_command();
-        
-};
+    Zombie *name_ptr;
 
-
-#endif
+    name_ptr = new Zombie(name);
+    return (name_ptr);
+}

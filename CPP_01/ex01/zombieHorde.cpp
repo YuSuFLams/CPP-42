@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/20 20:40:25 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 19:53:46 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/23 21:34:49 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/23 21:50:34 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "Zombie.hpp"
 
-std::string to_upper(std::string s)
+Zombie* zombieHorde( int N, std::string name )
 {
-    int i;
-
-    i = -1;
-    while (s[++i])
-        s[i] = toupper(s[i]);
-    return (s);
-}
-
-int main(int ac, char **str)
-{
-    int i;
-    
-    if(ac == 1)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-    i = 1;
-    while (i < ac)
+    Zombie *zom = new Zombie[N];
+    for (int i = 0; i < N; i++)
     {
-        std::cout << to_upper(str[i]);
-        i++;
+        Zombie[i].setName(name);
     }
-    std::cout << std::endl;
-    return 0;
+    return (Zom);
 }

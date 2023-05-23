@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 20:03:19 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 20:09:01 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/23 21:34:54 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/23 21:56:50 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-# include "contact.hpp"
+# include <iostream>
 
-class phonebook
+class Zombie
 {
     private:
-    
+        std::string name;
     public:
-        phonebook();
-        ~phonebook();
-        void    add_command();
-        void    search_command();
-        
+        Zombie( std::string name );
+        ~Zombie();
+        void    setName( std::string name );
+        void    announce( void );
 };
 
+Zombie* zombieHorde( int N, std::string name );
 
 #endif
