@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 21:34:54 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 21:56:50 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/23 22:47:16 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Zombie
     private:
         std::string name;
     public:
-        Zombie( std::string name );
+        Zombie();
         ~Zombie();
         void    setName( std::string name );
         void    announce( void );

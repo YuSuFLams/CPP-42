@@ -12,7 +12,7 @@ RM = rm -rf
 
 HEADER = Zombie.hpp
 
-SRCS = main.cpp newZombie.cpp zombieHorde.cpp Zombie.cpp
+SRCS = main.cpp zombieHorde.cpp Zombie.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
