@@ -1,4 +1,4 @@
-NAME = MoarBrainz
+NAME = brain
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
@@ -10,23 +10,17 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = Zombie.hpp
-
-SRCS = main.cpp zombieHorde.cpp Zombie.cpp
-
-OBJS = ${SRCS:.cpp=.o}
-
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $^ -o $@
+$(NAME): main.o
+	@$(CC) $(CFLAGS) $< -o $(NAME)
 	@printf "$(C_BLUE)    - Compilation finished!....$(C_RESET)\n"
 
-%.o: %.cpp $(HEADER)
+main.o: main.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@ 
 
 clean:
-	@$(RM) $(OBJS)
+	@$(RM) main.o
 	@printf "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)\n"
 
 fclean: clean

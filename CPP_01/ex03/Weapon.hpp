@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 21:35:01 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/24 01:44:29 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/23 23:19:21 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/23 23:31:23 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-# define X 5
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-int main()
+# include <iostream>
+
+class Weapon
 {
-    Zombie *zom = zombieHorde(X, "youssef");
-    for (int i = 0; i < X; i++)
-        zom[i].announce();
+    private:
+        std::string type;
+    public:
+        Weapon();
+        Weapon(const std::string type);
+        ~Weapon();
+        const   std::string &getType( void );
+        void    setType(std::string new_type);
+};
 
-    delete[] zom;
-    return (0);
-}
+#endif

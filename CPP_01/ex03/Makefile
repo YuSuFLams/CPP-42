@@ -1,4 +1,4 @@
-NAME = MoarBrainz
+NAME = violence
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
@@ -10,9 +10,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = Zombie.hpp
+HEADER = HumanA.hpp HumanB.hpp Weapon.hpp
 
-SRCS = main.cpp zombieHorde.cpp Zombie.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

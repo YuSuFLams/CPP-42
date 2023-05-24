@@ -5,20 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 21:35:01 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/24 01:44:29 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/23 22:58:50 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/23 23:13:41 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-# define X 5
+#include <iostream>
 
 int main()
 {
-    Zombie *zom = zombieHorde(X, "youssef");
-    for (int i = 0; i < X; i++)
-        zom[i].announce();
+    std::string s = "HI THIS IS BRAIN";
+    std::string *stringPTR = &s;
+    std::string &stringREF = s;
+    
+    std::cout << "stringSTR: " << &s << std::endl;
+    std::cout << "stringPTR: " << stringPTR << std::endl;
+    std::cout << "stringREF: " << &stringREF << std::endl;
 
-    delete[] zom;
+    std::cout << "-----------><-----------" << std::endl;
+    
+    std::cout << "stringSTR: " << s << std::endl;
+    std::cout << "stringPTR: " << *stringPTR << std::endl;
+    std::cout << "stringREF: " << stringREF << std::endl;
     return (0);
 }
