@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 21:51:42 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/27 21:27:34 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/29 22:45:42 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,24 @@ std::string Phonebook::test_phone(std::string phone_number)
     {   
         if (!std::isdigit(phone_number[i])) {
             std::cout << "Your Number Phone Should Be Numbers Only!." << std::endl;
-            // exit(EXIT_FAILURE);
             break ;
         }
     }
     return (phone_number);
+}
+
+std::string Phonebook::test_index(std::string index)
+{
+    int i = -1;
+
+    while (index[++i])
+    {   
+        if (!std::isdigit(index[i])) {
+            std::cout << "Your Index Should Be Valid!." << std::endl;
+            break ;
+        }
+    }
+    return (index);
 }
 
 bool Phonebook::all_digit(std::string pn)
@@ -90,8 +103,7 @@ void    Phonebook::add_command()
         std::cout << "Entre Phone Number :" ;
         std::getline(std::cin, phone_number);
         phone_number = test_phone(phone_number);
-    }
-    while (!all_digit(phone_number));
+    }while (!all_digit(phone_number));
     
     std::cout << "Entre Darkset Secret :" ;
     std::getline(std::cin, darkest_secret);
@@ -125,20 +137,28 @@ void    Phonebook::Show_all_columns()
     int index;
 	std::string str;
 
-    std::cout << "Enter index You Want To I Show You His Information: ";
-    std::getline(std::cin,str);
+    do
+    {
+        std::cout << "Enter index You Want To I Show You His Information: ";
+        std::getline(std::cin,str);
+        str = test_index(str);
+    }while (!all_digit(str));
+    
     if (std::cin.good())
         index = atoi(str.c_str());
+    
     if (index < 0 || index > 7)
     {
         std::cout << "Your Index Is Out Of Range!." << std::endl;
         return ;
     }
+    
     if (index >= 0 && index <= 7 && contact_p[index].getF_Name().length() <= 0)
     {
         std::cout << "Index Your Entry Is Empty In Contact!." << std::endl;
         return ;
     }
+    
     Contact contact;
     std::cout << "---------------------------------------------------------------------" << std::endl;
     std::cout << "||  Index   |First Name|Last  Name|Nick  Name|Phone Numb|Darset Sec||" << std::endl;

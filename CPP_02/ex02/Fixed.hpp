@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 21:45:02 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/26 19:03:26 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/29 23:47:17 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ class Fixed
 
         int     getRawBits( void ) const;
         void    setRawBits( int const raw );
-        float toFloat( void ) const;
-        int toInt( void ) const;
+        float   toFloat( void ) const;
+        int     toInt( void ) const;
 
         Fixed operator + (const Fixed & fix) const;
 		Fixed operator - (const Fixed & fix) const;

@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 01:32:49 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/29 04:38:07 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/30 00:37:04 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main()
 	for (int i = 0; i < N; i++)
 	{
 		std::cout << animal[i]->getType() << std::endl;
+        animal[i]->makeSound();
 	}
     std::cout << std::endl;
     std::cout << std::endl;
@@ -43,3 +44,4 @@ int main()
     
     return 0;
 }
+

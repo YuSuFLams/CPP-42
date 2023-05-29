@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 19:02:58 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/28 20:58:09 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/29 23:59:51 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Animal::Animal():type("Default")
 
 Animal::Animal(std::string _type):type(_type)
 {
-    std::cout << "Animal" << this->type<< " Default Constructor Called" << std::endl;
+    std::cout << "Animal " << this->type<< " Default Constructor Called" << std::endl;
 }
 
 Animal::Animal(Animal const &str)

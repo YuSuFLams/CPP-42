@@ -1,4 +1,4 @@
-NAME = Polymorphism
+NAME = Fixed
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
@@ -10,9 +10,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = WrongAnimal.hpp WrongCat.hpp Animal.hpp Cat.hpp Dog.hpp Brain.hpp
+HEADER = Fixed.hpp
 
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS = main.cpp Fixed.cpp 
 
 OBJS = ${SRCS:.cpp=.o}
 
