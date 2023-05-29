@@ -12,27 +12,27 @@ RM = rm -rf
 
 HEADER = Zombie.hpp
 
-SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
-OBJS = ${SRCS:.cpp=.o}
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $^ -o $@
-	@printf "$(C_BLUE)    - Compilation finished!....$(C_RESET)\n"
+	@echo "$(C_BLUE)    - Compilation finished!....$(C_RESET)"
 
 %.o: %.cpp $(HEADER)
-	@$(CC) $(CFLAGS) -c $< -o $@ 
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJS)
-	@printf "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@printf "$(C_GREEN)    - Removed finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed finished!....$(C_RESET)"
 
 re: all fclean
 
-.PHONY: all clean fclean re
+.PHONY: all fclean clean re

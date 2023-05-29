@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 23:19:12 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/24 00:14:32 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 03:17:16 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 03:20:41 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ HumanB::~HumanB()
 {
 }
 
-void HumanB::setWeapon(Weapon &weapon)
+void    HumanB::setWeapon(Weapon &weapon)
 {
     this->weapon = &weapon;
 }
 
-void HumanB::attack()
+void    HumanB::attack()
 {
     if (this->weapon)
         std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
     else
-        std::cout << this->name << " doesn't have a weapon" << std::endl; 
+        std::cout << this->name << " doesn't have a weapon" << std::endl;
 }

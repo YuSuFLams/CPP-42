@@ -5,20 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 21:35:01 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/24 01:44:29 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 00:46:00 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 01:20:12 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-# define X 5
 
 int main()
 {
-    Zombie *zom = zombieHorde(X, "youssef");
-    for (int i = 0; i < X; i++)
-        zom[i].announce();
+    std::string name;
+    int numb;
 
-    delete[] zom;
-    return (0);
+    std::cout << "Give me Name: ";
+    std::cin >> name;
+    std::cout << "Give me Repeat Number: ";
+    std::cin >> numb;
+    Zombie *zom = zombieHorde(numb, name);
+    
+    for (int i = 0; i < numb; i++)
+        zom->announce();
+    delete [] zom;
+    return 0;
 }

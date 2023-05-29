@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/20 20:40:25 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 19:53:46 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 00:20:21 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 00:31:59 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cctype>
 
 std::string to_upper(std::string s)
 {
@@ -27,14 +26,11 @@ int main(int ac, char **str)
 {
     int i;
     
-    if(ac == 1)
+    if (ac == 1)
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-    i = 1;
-    while (i < ac)
-    {
+    i = 0;
+    while (++i < ac)
         std::cout << to_upper(str[i]);
-        i++;
-    }
     std::cout << std::endl;
     return 0;
 }

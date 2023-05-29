@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 20:58:30 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 21:32:23 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 00:46:00 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 00:57:06 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 int main()
 {
-    // on heap
-    Zombie *me = newZombie("youssef");
-    me->announce();
+    std::string name;
 
-    delete me;
-    // on stack
-    randomChump("holla");
-    return (0);
+    std::cout << "Give me STR:";
+    std::cin >> name;
+    
+    std::cout << "Memory Heap:" << std::endl;
+    Zombie *zom = newZombie(name);
+    
+    zom->announce();
+    delete zom;
+    std::cout << "----------><----------" << std::endl;
+    std::cout << "Memory Stack:" << std::endl;
+    randomChump(name);
+    return 0;
 }

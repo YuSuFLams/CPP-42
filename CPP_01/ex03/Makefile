@@ -10,29 +10,29 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = HumanA.hpp HumanB.hpp Weapon.hpp
+HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
 
 SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
-OBJS = ${SRCS:.cpp=.o}
+OBJS = $(SRCS:.cpp=.o)
 
-all: $(NAME)
+all:$(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $^ -o $@
-	@printf "$(C_BLUE)    - Compilation finished!....$(C_RESET)\n"
+	@echo "$(C_BLUE)    - Compilation finished!....$(C_RESET)"
 
-%.o: %.cpp $(HEADER)
-	@$(CC) $(CFLAGS) -c $< -o $@ 
+%.o:%.cpp $(HEADER)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJS)
-	@printf "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@printf "$(C_GREEN)    - Removed finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed finished!....$(C_RESET)"
 
-re: all fclean
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: fclean all clean re

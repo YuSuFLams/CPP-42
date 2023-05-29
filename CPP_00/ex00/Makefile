@@ -13,20 +13,20 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): megaphone.o
-	@$(CC) $(CFLAGS) $< -o $(NAME)
-	@printf "$(C_BLUE)    - Compilation finished!....$(C_RESET)\n"
+	@$(CC) $(CFLAGS) $^ -o $@
+	@echo "$(C_BLUE)    - Compilation finished!....$(C_RESET)"
 
 megaphone.o: megaphone.cpp
-	@$(CC) $(CFLAGS) -c $< -o $@ 
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@$(RM) megaphone.o
-	@printf "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@printf "$(C_GREEN)    - Removed finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed finished!....$(C_RESET)"
 
 re: all fclean
 
-.PHONY: all clean fclean re
+.PHONY: all fclean clean re

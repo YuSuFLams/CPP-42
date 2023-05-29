@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 20:55:13 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 21:04:09 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 00:43:22 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 00:56:57 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 Zombie* newZombie( std::string name )
 {
-    Zombie *name_ptr;
+    Zombie *zom = new Zombie(name);
 
-    name_ptr = new Zombie(name);
-    return (name_ptr);
+    return (zom);
 }

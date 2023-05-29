@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 23:19:07 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 23:54:02 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 03:12:47 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 03:15:42 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ HumanA::~HumanA()
 {
 }
 
-void HumanA::attack()
+void    HumanA::attack()
 {
     std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
 }

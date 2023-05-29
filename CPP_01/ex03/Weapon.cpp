@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 23:19:18 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 23:32:52 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 03:02:44 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 03:08:11 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@ Weapon::Weapon()
 {
 }
 
-Weapon::Weapon(const std::string type)
-{
-    this->type = type;
-}
-
 Weapon::~Weapon()
 {
 }
 
-const   std::string& Weapon::getType( void )
+Weapon::Weapon(std::string  type)
+{
+    this->type = type;
+}
+
+const   std::string Weapon::getType()
 {
     return (this->type);
 }
 
-void    Weapon::setType(std::string new_tupe)
+void    Weapon::setType(std::string new_type)
 {
-    this->type = new_tupe;
+    this->type = new_type;
 }

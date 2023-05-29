@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 20:31:29 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 20:43:36 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 00:38:04 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 00:57:48 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ class Zombie
     private:
         std::string name;
     public:
-        Zombie( std::string name );
+        Zombie(std::string name);
         ~Zombie();
+
         void    announce( void );
 };
 

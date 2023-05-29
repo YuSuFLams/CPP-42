@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = PhoneBook
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
@@ -10,29 +10,29 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = contact.hpp phonebook.hpp
+HEADER = Contact.hpp PhoneBook.hpp
 
-SRCS = contact.cpp phonebook.cpp main.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $< -o $@
-	@printf "$(C_BLUE)    - Compilation finished!....$(C_RESET)\n"
+	@$(CC) $(CFLAGS) $^ -o $@
+	@echo "$(C_BLUE)    - Compilation finished!....$(C_RESET)"
 
-%.o: %.cpp $(HEADER)
-	@$(CC) $(CFLAGS) -c $< -o $@ 
+%.o:%.cpp $(HEADER)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJS)
-	@printf "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed Object File finished!....$(C_RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@printf "$(C_GREEN)    - Removed finished!....$(C_RESET)\n"
+	@echo "$(C_GREEN)    - Removed finished!....$(C_RESET)"
 
-re: all fclean
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all fclean clean re

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 21:34:58 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/23 22:47:09 by ylamsiah         ###   ########.fr       */
+/*   Created: 2023/05/25 00:39:52 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/05/25 01:13:51 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ Zombie::Zombie()
 
 Zombie::~Zombie()
 {
-    std::cout << this->name <<  ": Destroyed Successfuly"<< std::endl;
+    std::cout << this->name << ": Destroyed Successfuly" << std::endl;
 }
 
-void Zombie::announce()
+void    Zombie::announce( void )
 {
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl; 
+    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-void    Zombie::setName( std::string _name )
+void Zombie::setName(std::string  name)
 {
-    this->name = _name;
+    this->name = name;
 }
