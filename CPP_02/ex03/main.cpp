@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 21:44:23 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/30 19:21:27 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/30 19:26:22 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,16 @@ int main() {
     if (area_c == true) 
         std::cout << "\033[33;4mPoint You Give Me Is In Inside This Triangle !.\033[0m" << std::endl;
     else 
-        std::cout << "\033[36;4mPoint You Give Me Is Not found In This Triangle !.\033[0m" << std::endl;
+        std::cout << "\033[36;4mPoint You Give Me Is Not Found In This Triangle !.\033[0m" << std::endl;
+
     std::cout << std::endl;
     std::cout << std::endl;
+
     std::cout << " *******     Wrong Test     ******* " << std::endl;
     if (area_w == true) 
         std::cout << "\033[33;4mPoint You Give Me Is In Inside This Triangle !.\033[0m" << std::endl;
     else 
-        std::cout << "\033[36;4mPoint You Give Me Is Not found In This Triangle !.\033[0m" << std::endl;
+        std::cout << "\033[36;4mPoint You Give Me Is Not Found In This Triangle !.\033[0m" << std::endl;
     std::cout << std::endl;
 
     return 0;
