@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 05:36:02 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/30 06:02:20 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/30 18:56:17 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ class Point
         Fixed get_Y_P() const;
 };
 
-bool    bsq(Point const a, Point const b, Point const c, Point const point);
+bool    bsp(Point const a, Point const b, Point const c, Point const point);//Binary space partitioning
 
 #endif

@@ -1,4 +1,4 @@
-NAME = Talking
+NAME = Tiangle
 
 C_BLUE    = \033[0;34m
 C_GREEN   = \033[0;32m
@@ -10,9 +10,9 @@ CFLAGS = -W -W -W -std=c++98
 
 RM = rm -rf 
 
-HEADER = Fixed.hpp
+HEADER = Fixed.hpp Point.hpp
 
-SRCS = main.cpp Fixed.cpp 
+SRCS = Fixed.cpp bsp.cpp Point.cpp main.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 

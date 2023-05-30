@@ -6,7 +6,7 @@
 /*   By: ylamsiah <ylamsiah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:27:49 by ylamsiah          #+#    #+#             */
-/*   Updated: 2023/05/26 19:06:58 by ylamsiah         ###   ########.fr       */
+/*   Updated: 2023/05/30 18:08:20 by ylamsiah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ std::ostream& operator<<(std::ostream &output, Fixed const &input)
 }
 
 float Fixed::toFloat( void ) const {
-	return ((double)this->_fix / (double)(1 << this->_fix_bit));
+	return ((float)this->_fix / (float)(1 << this->_fix_bit));
 }
 
 int Fixed::toInt( void ) const {
