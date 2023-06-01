@@ -116,7 +116,6 @@ void    Phonebook::add_command()
 
 void    Phonebook::Show_4_columns()
 {
-    Contact contact;
     std::cout << "-----------------------------------------------" << std::endl;
     std::cout << "||  INDEX   |FIRST NAME|LAST  NAME|NICK  NAME||" << std::endl;
     std::cout << "||----------|----------|----------|----------||" << std::endl;
@@ -158,8 +157,7 @@ void    Phonebook::Show_all_columns()
         std::cout << "Index Your Entry Is Empty In Contact!." << std::endl;
         return ;
     }
-    
-    Contact contact;
+
     std::cout << "---------------------------------------------------------------------" << std::endl;
     std::cout << "||  Index   |First Name|Last  Name|Nick  Name|Phone Numb|Darset Sec||" << std::endl;
     std::cout << "||----------|----------|----------|----------|----------|----------||" << std::endl;
