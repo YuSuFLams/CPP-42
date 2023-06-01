@@ -10,9 +10,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-HEADER = contact.hpp phoneBook.hpp
+HEADER = contact.hpp phonebook.hpp
 
-SRCS = main.cpp contact.cpp phoneBook.cpp
+SRCS = main.cpp contact.cpp phonebook.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
