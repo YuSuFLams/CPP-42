@@ -1,4 +1,4 @@
-NAME = Filename
+NAME = replace
 
 C_BLUE    = \033[0;34m
 C_YELLOW  = \e[93;5;226m
