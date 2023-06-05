@@ -53,7 +53,7 @@ void    Harl::complain(std::string level)
     };
     std::string str[4] = { 
         "warning", 
-        "error"
+        "error",
         "info", 
         "debug", 
     };
