@@ -55,7 +55,7 @@ void    Harl::complain(std::string level)
         "warning", 
         "error",
         "info", 
-        "debug", 
+        "debug" 
     };
     int i = -1;
     while (++i < 4)
