@@ -52,10 +52,10 @@ void    Harl::complain(std::string level)
         &Harl::debug
     };
     std::string str[4] = { 
-        "debug", 
-        "info", 
         "warning", 
         "error"
+        "info", 
+        "debug", 
     };
     for (int i = 0; i < 4; i++)
         if (level == str[i])
